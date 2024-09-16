@@ -119,7 +119,7 @@ void loop() {
 
 #### Advanced LED PWM
     
-You can also use this type of [Advanced PWM]([https://randomnerdtutorials.com/esp32-pwm-arduino-ide/](https://randomnerdtutorials.com/esp32-pwm-arduino-ide/)) to control the LED
+You can also use this type of [Advanced PWM]([https://randomnerdtutorials.com/esp32-pwm-arduino-ide/](https://randomnerdtutorials.com/esp32-pwm-arduino-ide/](https://randomnerdtutorials.com/esp32-pwm-arduino-ide/)) to control the LED
 
 ```
 // the number of the LED pin
