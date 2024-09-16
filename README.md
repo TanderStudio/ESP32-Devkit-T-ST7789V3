@@ -177,8 +177,14 @@ to controll the `Backlight` i recommend to do it separately from the library
 Using the TFT library you need to set up the pin first either in the user setup or on the main code
 
   ### Bodmer TFT_eSPI
+  #### User_Setup
+  <details>
+    a
+    </details>
+    
+  #### Example
+  
 
-    #### user_setup
   
 </details>
 
