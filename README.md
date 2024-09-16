@@ -32,8 +32,8 @@ Features:
   +	USB Protection Diode
   + USB Type-C
   + Max +6V Input 
-  +	40 Pin
-  +	LC TFT ST7789V3
+  +	32 Pin
+  +	TFT LCD ST7789V3
   +	UART CH340K
   +	3.3V Logic Level
   +	Built In LED (GPIO2)
@@ -74,7 +74,7 @@ Pinout for the display
   
   <summary> Details </summary>
 
-To start, this Devkit board utilizes the same ESP32 as other Devkits. Specifically, it employs either the `ESP32-WROOM-32D` or `ESP32-WROOM-32U` module drom `ESPRESSIF`, which can be identified on the module itself. Additionally, this board is compatible with other libraries, as long as they do not interfere with pins already in use on the Devkit.
+To start, this Devkit board utilizes the same ESP32 as other Devkits. Specifically, it employs either the `ESP32-WROOM-32D` or `ESP32-WROOM-32U` module from `ESPRESSIF`, which can be identified on the module itself. Additionally, this board is compatible with other libraries, as long as they do not interfere with pins already in use on the Devkit.
 
 If you are using `platform.io`, select the `uPesy ESP32 Wroom DevKit` or `Denky32 (WROOM32)` as the target `board`.
 
@@ -191,7 +191,7 @@ Using the TFT library you need to set up the pin first either in the user setup 
   
 ![Screenshot 2024-09-17 001626](https://github.com/user-attachments/assets/6ef12419-e8ca-4e18-837c-49beca4b04df)
 
-Here are the code you needed to insert into the `User_Setup.h`
+To implement the necessary configurations, insert the following code into the `User_Setup.h` .
 
 you can choose the `USER_SETUP_ID` either `135` or `203` 
 
