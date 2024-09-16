@@ -153,7 +153,7 @@ void loop(){
   }
 }
 ```
-
+</details>
 ## TFT
 <details>
   
