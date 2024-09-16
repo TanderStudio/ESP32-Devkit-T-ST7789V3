@@ -24,9 +24,9 @@ This repository provides the basic data for the Devkit and includes basic code s
 ## Datasheet
 <details>
   <summary> Features, Board Size, Board Select, TFT</summary>
-  
+
    ### Description
-   </details>
+
 Features: 
   +	ESP32-WROOM-32D or ESP32-WROOM-32U Module
   +	USB Protection Diode
@@ -52,10 +52,9 @@ Features:
 
   ![Screenshot 2024-01-31 190518](https://github.com/TanderStudio/ESP32-Devkit-TFT/assets/157987904/d486ddf6-295e-46d6-9c67-f18a85f52e3e)
   
-</details>
 
 #### TFT 
-</details>
+
 Each display have the same pin
 | LCD TFT DISPLAY | GPIO |
 | ----------- | -- |
@@ -68,7 +67,6 @@ Each display have the same pin
 
 
 </details>
-</details>
 # CODE
 <details>
   <summary> Details </summary>
@@ -76,7 +74,7 @@ Each display have the same pin
 To start, this Devkit board utilizes the same ESP32 as other Devkits. Specifically, it employs either the `ESP32-WROOM-32D` or `ESP32-WROOM-32U` module drom `ESPRESSIF`, which can be identified on the module itself. Additionally, this board is compatible with other libraries, as long as they do not interfere with pins already in use on the Devkit.
 
 If you are using `platform.io`, select the `uPesy ESP32 Wroom DevKit` or `Denky32 (WROOM32)` as the target `board`.
-  
+  <details>
 ## Devkit
   ### Built in LED
   
@@ -151,7 +149,7 @@ void loop(){
   }
 }
 ```
-
+  <details>
 
 
 ## TFT
@@ -178,4 +176,3 @@ Using the TFT library you need to set up the pin first either in the user setup 
 
 </details>
   
-</details>
