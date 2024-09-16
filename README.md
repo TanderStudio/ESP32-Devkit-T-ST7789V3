@@ -26,6 +26,7 @@ This repository provides the basic data for the Devkit and includes basic code s
   <summary> Features, Board Size, Board Select, TFT</summary>
   
    ### Description
+   </details>
 Features: 
   +	ESP32-WROOM-32D or ESP32-WROOM-32U Module
   +	USB Protection Diode
@@ -46,9 +47,6 @@ Features:
   
   LCD TFT Display Resolution:
   +	172x320 px
-  
-  ### SCHEMATIC
-  ![image_2024-01-31_170944306](https://github.com/TanderStudio/ESP32-Devkit-TFT/assets/157987904/b922a3a0-2e35-49ee-9fa5-110b4d7dcd37)
 
   ### BOARD DIMENSION
 
