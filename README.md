@@ -120,6 +120,7 @@ void loop() {
 #### Advanced LED PWM
     
 You can also use this type of [Advanced PWM]([https://randomnerdtutorials.com/esp32-pwm-arduino-ide/](https://randomnerdtutorials.com/esp32-pwm-arduino-ide/)) to control the LED
+
 ```
 // the number of the LED pin
 const int ledPin = 2;  // 2 corresponds to GPIO2
