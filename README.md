@@ -1,6 +1,6 @@
 # ESP32-Devkit-T-ST7789V3
 
-![Devkit T TFT v1 2 Pinout data White BG resize](https://github.com/user-attachments/assets/2685c130-64bd-4e07-ac45-b5032ee49da1)
+![Devkit-T-ST7789V3 V1 Pinout White BG](https://github.com/user-attachments/assets/b2139c91-f7ed-45bd-b6ce-70900308ed68)
 
 
 ## About
