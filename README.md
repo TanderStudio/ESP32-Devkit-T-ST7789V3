@@ -67,6 +67,7 @@ Each display have the same pin
 
 
 </details>
+
 # CODE
 <details>
   <summary> Details </summary>
