@@ -177,9 +177,17 @@ to controll the `Backlight` i recommend to do it separately from the library
 Using the TFT library you need to set up the pin first either in the user setup or on the main code
 
   ### Bodmer TFT_eSPI
-  #### User_Setup
-  <details>
+  If u using the Bodmer Library, then add the library first into your project, after that, set the user Setup.
+  ### User_Setup
+
+<details>
+  To use the TFT display, you need to set the `User_Setup.h` first
+
+  To access it, on the VS-Code you can find it on the EXPLORER bar on the side of your screen. On your Project file, inside the .pio file - libdeps - TFT_eSPI - User_Setup.h
+  
+![Screenshot 2024-09-17 001626](https://github.com/user-attachments/assets/6ef12419-e8ca-4e18-837c-49beca4b04df)
     ```
+    
             // ST7789 135 x 240 display with no chip select line
         #define USER_SETUP_ID 135
         
@@ -196,11 +204,6 @@ Using the TFT library you need to set up the pin first either in the user setup 
         //#define TFT_INVERSION_ON
         //#define TFT_INVERSION_OFF
         
-        // DSTIKE stepup
-        //#define TFT_DC    23
-        //#define TFT_RST   32
-        //#define TFT_MOSI  26
-        //#define TFT_SCLK  27
         
         // Generic ESP32 setup
         //#define TFT_MISO 19
@@ -209,14 +212,8 @@ Using the TFT library you need to set up the pin first either in the user setup 
         #define TFT_CS    5 // Not connected
         #define TFT_DC    17
         #define TFT_RST   16  // Connect reset to ensure display initialises
-        
-        // For NodeMCU - use pin numbers in the form PIN_Dx where Dx is the NodeMCU pin designation
-        //#define TFT_CS   -1      // Define as not used
-        //#define TFT_DC   PIN_D1  // Data Command control pin
-        //#define TFT_RST  PIN_D4  // TFT reset pin (could connect to NodeMCU RST, see next line)/
-        //#define TFT_RST  -1      // TFT reset pin connect to NodeMCU RST, must also then add 10K pull down to TFT SCK
-        
-        
+
+                
         #define LOAD_GLCD   // Font 1. Original Adafruit 8 pixel font needs ~1820 bytes in FLASH
         #define LOAD_FONT2  // Font 2. Small 16 pixel high font, needs ~3534 bytes in FLASH, 96 characters
         #define LOAD_FONT4  // Font 4. Medium 26 pixel high font, needs ~5848 bytes in FLASH, 96 characters
@@ -238,9 +235,9 @@ Using the TFT library you need to set up the pin first either in the user setup 
         
         // #define SUPPORT_TRANSACTIONS
     ```
-    </details>
+</details>
     
-  #### Example
+  ### Example
   
 
   
