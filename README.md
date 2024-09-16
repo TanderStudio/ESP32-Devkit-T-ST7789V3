@@ -1,5 +1,7 @@
 # ESP32-Devkit-T-ST7789V3
 
+![Devkit T TFT v1 2 Pinout data White BG resize](https://github.com/user-attachments/assets/2685c130-64bd-4e07-ac45-b5032ee49da1)
+
 
 ## About
 Development board for ESP32 and LCD TFT Display. This kit offers a range of LCD TFT Display options, including ST7789, ST7789V, ST7789V3, GC9A01, and more, providing developers with flexibility to choose the display and all pin that best suits their project needs. Alongside this display versatility, the kit features four input pulldown buttons for user interactions and an additional input for voltage readings. This board utilizes the `ESP32 module` from [ESPRESSIF](https://www.espressif.com).
