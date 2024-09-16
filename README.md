@@ -177,15 +177,21 @@ to controll the `Backlight` i recommend to do it separately from the library
 Using the TFT library you need to set up the pin first either in the user setup or on the main code
 
   ### Bodmer TFT_eSPI
+  
   If u using the Bodmer Library, then add the library first into your project, after that, set the user Setup.
+  
   ### User_Setup
 
 <details>
+  
   To use the TFT display, you need to set the `User_Setup.h` first
 
-  To access it, on the VS-Code you can find it on the EXPLORER bar on the side of your screen. On your Project file, inside the .pio file - libdeps - TFT_eSPI - User_Setup.h
+  To access it, on the VS-Code you can find it on the EXPLORER bar on the side of your screen. On your Project file, inside the .pio - libdeps - TFT_eSPI - User_Setup.h
   
 ![Screenshot 2024-09-17 001626](https://github.com/user-attachments/assets/6ef12419-e8ca-4e18-837c-49beca4b04df)
+
+Here are the code you needed to insert into the `User_Setup.h` .
+you can choose the `USER_SETUP_ID` either `135` or `203` 
     ```
     
             // ST7789 135 x 240 display with no chip select line
