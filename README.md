@@ -118,8 +118,6 @@ void loop() {
 ```
 
 #### Advanced LED PWM
-
-  <details>
     
 You can also use this type of [Advanced PWM]([https://randomnerdtutorials.com/esp32-pwm-arduino-ide/](https://randomnerdtutorials.com/esp32-pwm-arduino-ide/)) to control the LED
 ```
@@ -155,7 +153,6 @@ void loop(){
   }
 }
 ```
-
   <details>
 
 ## TFT
@@ -181,4 +178,4 @@ Using the TFT library you need to set up the pin first either in the user setup 
 
 
 </details>
-  <details>
+
