@@ -76,6 +76,7 @@ To start, this Devkit board utilizes the same ESP32 as other Devkits. Specifical
 
 If you are using `platform.io`, select the `uPesy ESP32 Wroom DevKit` or `Denky32 (WROOM32)` as the target `board`.
   <details>
+    
 ## Devkit
   ### Built in LED
   
@@ -83,6 +84,7 @@ If you are using `platform.io`, select the `uPesy ESP32 Wroom DevKit` or `Denky3
   This code snippet is for controlling the LED on the Devkit, which is connected to `GPIO 2`. You can use this LED in the same way as any standard LED.
 
 #### Simple LED PWM
+
   ```
 #include <Arduino.h>
 
@@ -116,6 +118,9 @@ void loop() {
 ```
 
 #### Advanced LED PWM
+
+  <details>
+    
 You can also use this type of [Advanced PWM]([https://randomnerdtutorials.com/esp32-pwm-arduino-ide/](https://randomnerdtutorials.com/esp32-pwm-arduino-ide/)) to control the LED
 ```
 // the number of the LED pin
@@ -150,8 +155,8 @@ void loop(){
   }
 }
 ```
-  <details>
 
+  <details>
 
 ## TFT
 <details>
@@ -176,4 +181,4 @@ Using the TFT library you need to set up the pin first either in the user setup 
 
 
 </details>
-  
+  <details>
