@@ -1,5 +1,6 @@
 # ESP32-Devkit-T-ST7789V3
 
+![Devkit-T-ST7789V3 V1 Pinout White BG resize](https://github.com/user-attachments/assets/e2c77a3a-1b03-4acb-9fcd-7598d502f37b)
 
 
 ## About
@@ -26,29 +27,25 @@ This repository provides the basic data for the Devkit and includes basic code s
   
    ### Description
 Features: 
-  +	ESP32-WROOM-32X Module
+  +	ESP32-WROOM-32D or ESP32-WROOM-32U Module
   +	USB Protection Diode
   + USB Type-C
   + Max +6V Input 
   +	40 Pin
-  +	LCD TFT Display
-  +	UART CH340C
+  +	LC TFT ST7789V3
+  +	UART CH340K
   +	3.3V Logic Level
   +	Built In LED (GPIO2)
-  +	Voltage Input Read (Max +6V)
   
   Board Size:
   +	Width: 46.04 mm x Length: 51.26 mm (With Antenna: 57.51 mm)
   
-  Compatible Board Select: 
+  Compatible Board Select (for platform.io): 
   +	uPesy ESP32 Wroom DevKit
   +	Denky32 (WROOM32)
   
   LCD TFT Display Resolution:
-  +	ST7789V3 (172x320 px)
-  +	ST7789V2 (240x280 px)
-  +	ST7789 (240x240 px)
-  +	GC9A01 (240x240 px)
+  +	172x320 px
   
   ### SCHEMATIC
   ![image_2024-01-31_170944306](https://github.com/TanderStudio/ESP32-Devkit-TFT/assets/157987904/b922a3a0-2e35-49ee-9fa5-110b4d7dcd37)
@@ -74,19 +71,6 @@ Each display have the same pin
 | `RST`       | 17 |
 | `BackLight` | 4  |
 
-#### Button
-| BUTTON | GPIO |
-| ----------- | -- |
-| `INPUT 1`   | 35 |
-| `INPUT 2`   | 32 |
-| `INPUT 3`   | 33 |
-| `INPUT 4`   | 25 |
-
-#### Other
-| Name | GPIO |
-| -----------     | -- |
-| `Voltage Read`  | 34 |
-| `LED`           | 28 |
 
 </details>
 
@@ -99,52 +83,6 @@ To start, this Devkit board utilizes the same ESP32 as other Devkits. Specifical
 If you are using `platform.io`, select the `uPesy ESP32 Wroom DevKit` or `Denky32 (WROOM32)` as the target `board`.
   
 ## Devkit
-<details>
-<summary>V Read, LED, Button</summary>
-  
-  ### Voltage Read
-  <details>
-  This code snippet is for reading the voltage on an ESP32, offering a straightforward method for monitoring battery levels. It's crucial to acknowledge that the accuracy of voltage readings may differ among individual ESP32 devices, and the ADC readings of the ESP32 `may not` exhibit a linear pattern. The voltage input read system employs a basic voltage divider using `two` `220k` ohm resistors, as indicated in the schematic. The code is setup to operate with this specific voltage divider setup.
-
-You can use the code provided below
-  ```
-#include <Arduino.h>
-
-#define v_inp 34 //define the voltage inout pin
-
-void setup() {
-
-    Serial.begin(9600);
-
-    pinMode(v_inp, OUTOUT); //define the pinMode
-    
-    Serial.println("Hello World");
-}
-
-void loop() {
-
-    float VoltageRead = analogRead(v_inp);
-        for (int i = 0; i < 16; i++) {
-            VoltageRead = VoltageRead + analogRead(v_inp); // ADC
-        }
-
-    float Voltage = 2 * VoltageRead / 16 / 4095.0 * 3.3; // ADC correction, ADC range: 0-4095, Vref: 3.3V
-    Serial.println(Voltage,3);
-
-}
-```
-#### Snippet
-You can also just copy this code and put it on the `void loop`.
-  ```
-float VoltageRead = analogRead(34);
-  for (int i = 0; i < 16; i++) {
-    VoltageRead = VoltageRead + analogRead(34); // ADC
-  }
-  float Voltage = 2 * VoltageRead / 16 / 4095.0 * 3.3; // ADC correction, ADC range: 0-4095, Vref: 3.3V
-  Serial.println(Voltage,3);
-```
-</details>
-
   ### Built in LED
   
   <details>
@@ -220,63 +158,7 @@ void loop(){
 ```
 </details>
 
-  ### Button
 
-<details>
-  
-  The following code snippet is designed to read button inputs from the Devkit. Each button is pulled down using a 10K Ohm resistor. The list of `GPIOs` used can be seen below.
-  
-| BUTTON | GPIO |
-| ----------- | -- |
-| `INPUT 1`   | 35 |
-| `INPUT 2`   | 32 |
-| `INPUT 3`   | 33 |
-| `INPUT 4`   | 25 |
-
-
-Here are the example of how to read the button input
-  ```
-#include <Arduino.h>
-
-#define input_1 35
-#define input_2 32
-#define input_3 33
-#define input_4 25
-
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World");
-
-  pinMode(input_1, INPUT);
-  pinMode(input_2, INPUT);
-  pinMode(input_3, INPUT);
-  pinMode(input_4, INPUT);
-  
-  Serial.println("ESP Start");
-  Serial.println("--------------------------------------------------");
-
-}
-
-void loop() {
-
- if (digitalRead(input_1) == HIGH){
-      Serial.println("input_1");
-    }
-    if (digitalRead(input_2) == HIGH){
-      Serial.println("input_2");
-    }
-    if (digitalRead(input_3) == HIGH){
-      Serial.println("input_3");
-    }
-    if (digitalRead(input_4) == HIGH){
-      Serial.println("input_4");
-      }
-      delay(100);
-
-}
-```
-</details>
 </details>
 
 ## TFT
