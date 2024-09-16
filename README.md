@@ -177,6 +177,5 @@ Using the TFT library you need to set up the pin first either in the user setup 
 
 
 
-</details>
 
 
