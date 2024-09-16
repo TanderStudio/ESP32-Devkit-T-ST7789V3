@@ -78,10 +78,9 @@ To start, this Devkit board utilizes the same ESP32 as other Devkits. Specifical
 
 If you are using `platform.io`, select the `uPesy ESP32 Wroom DevKit` or `Denky32 (WROOM32)` as the target `board`.
 
-    
 
   ## Built in LED
-  
+  <details>
   This code snippet is for controlling the LED on the Devkit, which is connected to `GPIO 2`. You can use this LED in the same way as any standard LED.
 
 #### Simple LED PWM
