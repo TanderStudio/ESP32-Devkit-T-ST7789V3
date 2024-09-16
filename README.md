@@ -69,7 +69,9 @@ Each display have the same pin
 </details>
 
 # CODE
+
 <details>
+  
   <summary> Details </summary>
 
 To start, this Devkit board utilizes the same ESP32 as other Devkits. Specifically, it employs either the `ESP32-WROOM-32D` or `ESP32-WROOM-32U` module drom `ESPRESSIF`, which can be identified on the module itself. Additionally, this board is compatible with other libraries, as long as they do not interfere with pins already in use on the Devkit.
@@ -77,10 +79,10 @@ To start, this Devkit board utilizes the same ESP32 as other Devkits. Specifical
 If you are using `platform.io`, select the `uPesy ESP32 Wroom DevKit` or `Denky32 (WROOM32)` as the target `board`.
 
     
-## Devkit
-  ### Built in LED
-  
 
+  ## Built in LED
+  
+<details>
   This code snippet is for controlling the LED on the Devkit, which is connected to `GPIO 2`. You can use this LED in the same way as any standard LED.
 
 #### Simple LED PWM
@@ -154,6 +156,7 @@ void loop(){
 }
 ```
 
+<details>
 
 ## TFT
 <details>
