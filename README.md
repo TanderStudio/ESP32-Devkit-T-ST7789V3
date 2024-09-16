@@ -54,11 +54,8 @@ Features:
   
 </details>
 
-### PINOUT
-<details>
-<summary> PINOUT </summary>
-
 #### TFT 
+</details>
 Each display have the same pin
 | LCD TFT DISPLAY | GPIO |
 | ----------- | -- |
@@ -71,7 +68,7 @@ Each display have the same pin
 
 
 </details>
-
+</details>
 # CODE
 <details>
   <summary> Details </summary>
@@ -154,9 +151,7 @@ void loop(){
   }
 }
 ```
-</details>
-</details>
-</details>
+
 
 
 ## TFT
