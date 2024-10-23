@@ -246,6 +246,8 @@ you can choose the `USER_SETUP_ID` either `135` or `203`
 </details>
     
   ### Example
+
+<details>
   after you finish the setup for the code, you can use the simple example below that i provide
 
       #include <Arduino.h>
@@ -299,7 +301,7 @@ you can choose the `USER_SETUP_ID` either `135` or `203`
         delay(1000);
       
       }
-
+</details>
 
 
  </details> 
