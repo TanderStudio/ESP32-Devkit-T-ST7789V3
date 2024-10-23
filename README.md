@@ -158,8 +158,6 @@ You can also use this type of [Advanced PWM](https://randomnerdtutorials.com/esp
   
 To begin, you can choose any display library compatible with the ESP32 Devkit and TFT display. I recommend using either [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI?tab=readme-ov-file) by Bodmer or [LovyanGFX](https://github.com/lovyan03/LovyanGFX) by lovyan03.
 
-The `pin` configuration for the display for this board remains the same across various displays.
-
 to controll the `Backlight` i recommend to do it separately from the library
 
 | LCD TFT DISPLAY | GPIO |
