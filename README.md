@@ -56,7 +56,7 @@ Pinout for the display
 | LCD TFT DISPLAY | GPIO |
 | ----------- | -- |
 | `MOSI`      | 23 |
-| `SCK`       | 28 |
+| `SCK`       | 18 |
 | `CS`        | 16 |
 | `DC`        | 5  |
 | `RST`       | 17 |
