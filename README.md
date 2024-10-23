@@ -47,7 +47,7 @@ Features:
   
   LCD TFT Display Resolution:
   +	172x320 px
-  +	19.45 mm x 37.45 mm
+  +	19.45 mm x 37.00 mm
 
 #### TFT 
 
@@ -247,7 +247,7 @@ you can choose the `USER_SETUP_ID` either `135` or `203`
   ### Example
 
 <details>
-  after you finish the setup for the code, you can use the simple example below that i provide
+  After completing the setup for the code, you can use the simple example below to test your board. For more functionality, you can refer to the examples inside the library or explore the Bodmer [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI?tab=readme-ov-file) library.
 
 ```
       #include <Arduino.h>
