@@ -39,7 +39,7 @@ Features:
   +	Built In LED (GPIO2)
   
   Board Size:
-  +	Width: 25.37 mm x Length: 47.08 mm
+  +	Width: 25.4 mm x Length: 47.11 mm
   
   Compatible Board Select (for platform.io): 
   +	uPesy ESP32 Wroom DevKit
@@ -195,7 +195,7 @@ To implement the necessary configurations, insert the following code into the `U
 
 you can choose the `USER_SETUP_ID` either `135` or `203` 
 
-    
+```
        // ST7789 135 x 240 display with no chip select line
             #define USER_SETUP_ID 135
             
@@ -242,6 +242,9 @@ you can choose the `USER_SETUP_ID` either `135` or `203`
             #define SPI_TOUCH_FREQUENCY  2500000
             
             // #define SUPPORT_TRANSACTIONS
+```
+
+
 
 </details>
     
@@ -250,6 +253,7 @@ you can choose the `USER_SETUP_ID` either `135` or `203`
 <details>
   after you finish the setup for the code, you can use the simple example below that i provide
 
+```
       #include <Arduino.h>
       #include "TFT_eSPI.h"
       
@@ -301,6 +305,8 @@ you can choose the `USER_SETUP_ID` either `135` or `203`
         delay(1000);
       
       }
+```
+
 </details>
 
 
