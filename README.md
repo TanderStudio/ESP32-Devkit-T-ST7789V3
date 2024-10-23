@@ -1,6 +1,7 @@
 # ESP32-Devkit-T-ST7789V3
 
-![Devkit-T-ST7789V3 V1 Pinout White BG resize](https://github.com/user-attachments/assets/e2c77a3a-1b03-4acb-9fcd-7598d502f37b)
+![Devkit-T-ST7789V3 V1 Pinout](https://github.com/user-attachments/assets/cdf7b3b3-8784-41a8-bac1-a2678b3ee0ec)
+
 
 
 ## About
