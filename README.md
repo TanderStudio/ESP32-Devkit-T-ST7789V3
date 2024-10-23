@@ -246,7 +246,61 @@ you can choose the `USER_SETUP_ID` either `135` or `203`
 </details>
     
   ### Example
-  
+  after you finish the setup for the code, you can use the simple example below that i provide
+
+      #include <Arduino.h>
+      #include "TFT_eSPI.h"
+      
+      TFT_eSPI tft = TFT_eSPI();  // Invoke custom library 
+      
+      TFT_eSprite spritte = TFT_eSprite(&tft); // Sprite object "spritte" created
+      
+      
+      #define BL 4
+      #define IO2 2
+      
+      uint16_t colors[] = {
+        TFT_CYAN, TFT_MAGENTA, TFT_YELLOW, TFT_BLACK, TFT_RED, TFT_GREEN, TFT_BLUE,TFT_WHITE,TFT_ORANGE,TFT_PINK   // RGB colors
+      };
+      
+      int  brightness;
+      int fadeAmount;
+      void setup() {
+      
+      Serial.begin(115200);
+      Serial.println("SETUP");
+      
+      pinMode(BL, OUTPUT);
+      pinMode(IO2, OUTPUT);
+      
+      int BL_brightness = 100;
+      analogWrite(BL, BL_brightness);
+      digitalWrite(IO2, HIGH);
+      
+      tft.init();
+      tft.setSwapBytes(true);
+      
+      Serial.println("ESP BEGIN");
+      tft.fillScreen(TFT_ORANGE);
+      
+      }
+      
+      void loop() {
+      
+       int segmentHeight = 32;      // Set the height of each color segment (328 / 7 = 46)
+        int numColors = sizeof(colors) / sizeof(colors[0]);  // Get the number of colors (7 in this case)
+      
+        // Loop through each color and display it in a horizontal segment
+        for (int i = 0; i < numColors; i++) {
+          tft.fillRect(0, i * segmentHeight, 172, segmentHeight, colors[i]);  // Draw the segment with the current color
+        }
+        
+        Serial.println("Hello World");
+        delay(1000);
+      
+      }
+
+
 
  </details> 
 </details>
