@@ -47,11 +47,7 @@ Features:
   
   LCD TFT Display Resolution:
   +	172x320 px
-
-  ### BOARD DIMENSION
-
-  ![Screenshot 2024-01-31 190518](https://github.com/TanderStudio/ESP32-Devkit-TFT/assets/157987904/d486ddf6-295e-46d6-9c67-f18a85f52e3e)
-  
+  +	19.45 mm x 37.45 mm
 
 #### TFT 
 
