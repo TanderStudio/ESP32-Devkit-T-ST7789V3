@@ -191,6 +191,8 @@ To implement the necessary configurations, insert the following code into the `U
 
 you can choose the `USER_SETUP_ID` either `135` or `203` 
 
+Next, set the pins according to your devkit configuration and define the TFT width and height (172 and 320) as shown in the example below.
+
 ```
        // ST7789 135 x 240 display with no chip select line
             #define USER_SETUP_ID 135
