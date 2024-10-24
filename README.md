@@ -250,7 +250,10 @@ Next, set the pins according to your devkit configuration and define the TFT wid
   ### Example
 
 <details>
-  
+
+
+<summary> Colour Test </summary>
+   
   After completing the setup for the code, you can use the simple example below to test your board. For more functionality, you can refer to the examples inside the library or explore the Bodmer [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI?tab=readme-ov-file) library.
 
 ```
