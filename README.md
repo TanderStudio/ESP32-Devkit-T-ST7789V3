@@ -259,55 +259,58 @@ Next, set the pins according to your devkit configuration and define the TFT wid
 ```
 #include <Arduino.h>
 #include "TFT_eSPI.h"
-      
-TFT_eSPI tft = TFT_eSPI();  // Invoke custom library 
-      
-TFT_eSprite spritte = TFT_eSprite(&tft); // Sprite object "spritte" created
-      
-      
+
 #define BL 4
 #define IO2 2
-      
+
+TFT_eSPI tft = TFT_eSPI();  // Invoke custom library 
+
 uint16_t colors[] = {
-  TFT_CYAN, TFT_MAGENTA, TFT_YELLOW, TFT_BLACK, TFT_RED, TFT_GREEN, TFT_BLUE,TFT_WHITE,TFT_ORANGE,TFT_PINK   // RGB colors
+  TFT_CYAN, TFT_MAGENTA, TFT_YELLOW, TFT_BLACK, TFT_RED,
+  TFT_GREEN, TFT_BLUE,TFT_WHITE,TFT_ORANGE,TFT_PINK   // colors
 };
       
-int  brightness;
-int fadeAmount;
+int BL_brightness = 100;  // set the brightness level 0 - 255
+
 void setup() {
       
-  Serial.begin(115200);
-  Serial.println("SETUP");
-        
-  pinMode(BL, OUTPUT);
-  pinMode(IO2, OUTPUT);
-        
-  int BL_brightness = 100;
-  analogWrite(BL, BL_brightness);
-  digitalWrite(IO2, HIGH);
-        
-  tft.init();
-  tft.setSwapBytes(true);
-        
-  Serial.println("ESP BEGIN");
-  tft.fillScreen(TFT_ORANGE);
+Serial.begin(115200);
+Serial.println("SETUP");
       
-}
+pinMode(BL, OUTPUT);
+pinMode(IO2, OUTPUT);
+      
+
+analogWrite(BL, BL_brightness);  // Set the TFT backlight Brightness
+digitalWrite(IO2, HIGH);      // Set the LED on the GPIO2 as HIGH to turn on the LED
+      
+
+tft.init();  // initialize the library
+tft.setSwapBytes(true);  
+
+tft.fillScreen(TFT_ORANGE); //set the background
+
+      }
       
 void loop() {
+
+tft.setRotation(1); // change the rotation for the TFT
+
+int segmentWidth = 32;   
+   
+int numColors = sizeof(colors) / sizeof(colors[0]);  // Get the number of colors
+
+     for (int i = 0; i < numColors; i++) {   // Loop through each color and display it in a vertical segment
+
+    tft.fillRect(i * segmentWidth, 0, segmentWidth, 172, colors[i]);  // Draw the segment with the current color   
+
+  }
+ 
+
+delay(1000);
+Serial.println("Hello World");
       
-  int segmentHeight = 32;      // Set the height of each color segment (328 / 7 = 46)
-  int numColors = sizeof(colors) / sizeof(colors[0]);  // Get the number of colors (7 in this case)
-      
-// Loop through each color and display it in a horizontal segment
-    for (int i = 0; i < numColors; i++) {
-      tft.fillRect(0, i * segmentHeight, 172, segmentHeight, colors[i]);  // Draw the segment with the current color
-   }
-        
-  Serial.println("Hello World");
-  delay(1000);
-      
-      }
+}
 ```
 
 
