@@ -155,7 +155,8 @@ You can also use this type of [Advanced PWM](https://randomnerdtutorials.com/esp
 
 ## TFT
 
-  
+<details>
+
 To begin, you can choose any display library compatible with the ESP32 Devkit and TFT display. I recommend using either [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI?tab=readme-ov-file) by Bodmer or [LovyanGFX](https://github.com/lovyan03/LovyanGFX) by lovyan03.
 
 to controll the `Backlight` i recommend to do it separately from the library
@@ -172,7 +173,7 @@ to controll the `Backlight` i recommend to do it separately from the library
 Using the TFT library you need to set up the pin first either in the user setup or on the main code.
 
   ### Bodmer TFT_eSPI
-  <details>
+
   
   If u using the Bodmer Library, then add the library first into your project, after that, set the user Setup.
   
@@ -303,9 +304,9 @@ you can choose the `USER_SETUP_ID` either `135` or `203`
       }
 ```
 
+
+
 </details>
-
-
  </details> 
 
 
