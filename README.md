@@ -154,7 +154,7 @@ You can also use this type of [Advanced PWM](https://randomnerdtutorials.com/esp
 </details>
 
 ## TFT
-<details>
+
   
 To begin, you can choose any display library compatible with the ESP32 Devkit and TFT display. I recommend using either [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI?tab=readme-ov-file) by Bodmer or [LovyanGFX](https://github.com/lovyan03/LovyanGFX) by lovyan03.
 
@@ -307,7 +307,7 @@ you can choose the `USER_SETUP_ID` either `135` or `203`
 
 
  </details> 
-</details>
+
 
 
 
