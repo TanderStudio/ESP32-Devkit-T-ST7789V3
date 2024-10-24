@@ -83,33 +83,34 @@ If you are using `platform.io`, select the `uPesy ESP32 Wroom DevKit` or `Denky3
 #### Simple LED PWM
 
   ```
-    #include <Arduino.h>
+#include <Arduino.h>
+
+//define the pin for the LED
+#define BuiltInLED 2
     
-    //define the pin for the LED
-    #define BuiltInLED 2
     
+int brightness = 0; // how bright the LED is
+int fadeAmount = 5; // how many points to fade the LED by
     
-    int brightness = 0; // how bright the LED is
-    int fadeAmount = 5; // how many points to fade the LED by
+void setup() {
     
-    void setup() {
+Serial.begin(9600);
     
-        Serial.begin(9600);
+pinMode(BuiltInLED, OUTPUT); // Set the LED pin as an output
     
-        pinMode(BuiltInLED, OUTPUT); // Set the LED pin as an output
+Serial.println("Hello World");
+
+}
     
-        Serial.println("Hello World");
-    }
+void loop() {
     
-    void loop() {
-    
-        brightness = brightness + fadeAmount; // Change the brightness
-            if (brightness <= 0 || brightness >= 255) {
-                fadeAmount = -fadeAmount; // Reverse the fade direction
-            }
+  brightness = brightness + fadeAmount; // Change the brightness
+    if (brightness <= 0 || brightness >= 255) {
+      fadeAmount = -fadeAmount; // Reverse the fade direction
+      }
         
-        analogWrite(BuiltInLED, brightness); // Set the brightness
-        delay(20); // Delay for smoother fading (adjust as needed)
+  analogWrite(BuiltInLED, brightness); // Set the brightness
+  delay(20); // Delay for smoother fading (adjust as needed)
     
     }
 ```
